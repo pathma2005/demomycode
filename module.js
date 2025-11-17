@@ -20,3 +20,5 @@ class student extends person{
 }
 let stu1=new student("sri",20,"A");
 console.log(stu1.details());
+// 
+console.log(stu1.showgrade());
