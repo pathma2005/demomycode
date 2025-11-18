@@ -1,3 +1,5 @@
+// set an map methods
+// set method
 let letter =new Set(["a","b","c"]);
 letter.add("d");
 letter.add("a");
