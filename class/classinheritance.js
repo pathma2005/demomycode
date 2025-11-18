@@ -121,5 +121,3 @@ console.log(item1.itemDetails);
 
 item1.setPrice = 60;
 console.log(item1.itemDetails);
-
-
