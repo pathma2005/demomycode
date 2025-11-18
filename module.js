@@ -69,3 +69,29 @@ class bike{
 module.export=bike;
 const bike1=new bike("ktm","duke");
 console.log(bike1.bikes());
+//using getters in class
+class animal{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+get details(){
+        return "name:"+this.name+"age:"+this.age;
+    }
+}
+const animal1=new animal("dog",5);
+console.log(animal1.details);
+// using stter methids in class
+class animals{
+    constructor(name,breed){
+        this.name=name;
+        this.breed=breed;
+    }
+    set setName(newName){
+        this.name=newName;
+    }
+}
+const animal2=new animals("dog","puppy");
+animal2.setName="cat";
+console.log(animal2)
+console.log(animal2.name);
