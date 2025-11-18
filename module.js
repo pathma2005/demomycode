@@ -87,11 +87,33 @@ class animals{
         this.name=name;
         this.breed=breed;
     }
+    animalinfo(){
+        return "name:"+this.name+"breed:"+this.breed;    
+    }
     set setName(newName){
         this.name=newName;
     }
 }
 const animal2=new animals("dog","puppy");
 animal2.setName="cat";
-console.log(animal2)
+console.log(animal2.animalinfo());
 console.log(animal2.name);
+// using getter and setter together
+class decoreitem{
+    constructor(type,price){
+        this.type=type;
+        this.price=price;
+    }
+    get itemDetails(){
+        return "type:"+this.type+"price:"+this.price;
+    }
+    set setPrice(newPrice){
+        this.price=newPrice;
+    }
+}
+const item1=new decoreitem("vase",50);
+console.log(item1.itemDetails);
+item1.setPrice=60;
+console.log(item1.itemDetails);
+
+
