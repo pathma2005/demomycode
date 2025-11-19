@@ -23,5 +23,27 @@ mypromise
     console.log("its show error" + error);
   });
 // using login page in the promise
-let promise = new pro();
+function login(){
+  return new Promise((resolve,reject)=>{
+    const username=prompt("Enter the Email");
+    const password=prompt("Enter the password");
+    setTimeout(()=>{
+      const correctusername="pathu123@gmail.com"
+      const correctpasswor="sri";
+      if(username===correctusername&&password===correctpasswor){
+        resolve("login successfully"+username);
+      }else{
+        reject("pls give correct email and password");
+      }
+    },3000)
+  })
+}
+login()
+.then((value)=>{
+  console.log(value)
+})
+.catch((error)=>{
+  console.log("error",error)
+})
+
 
