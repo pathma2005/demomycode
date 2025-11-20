@@ -1,7 +1,7 @@
 const mypromise = new Promise((resolve, reject) => {
   const name = prompt("Enter the Name:");
   setTimeout(() => {
-    const emoji = ["😎", "😵", "💩", "😍", "🤥", "☠️", "🤑"];
+    const emoji = ["😎", "😵", "😭", "😍", "🤥", "👻", "🤑"];
     const randomIndex = parseInt(Math.random() * emoji.length);
     let emo = emoji[randomIndex];
     if (emo) {
