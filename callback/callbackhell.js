@@ -12,7 +12,7 @@
 // It looks like a deep pyramid structure that keeps moving rightwards.
 function selectMovie(movieName, callback) {
   setTimeout(() => {
-    callback(`Movie: ${movieName}`);
+    callback(`Movie 🍿: ${movieName}`);
   }, 500);
 }
 
@@ -36,13 +36,13 @@ function lockSeats(seats, callback) {
 
 function makePayment(lockedSeats, callback) {
   setTimeout(() => {
-    callback("Payment Successful ₹250");
+    callback("Payment Successful ₹250 💸");
   }, 500);
 }
 
 function generateTicket(paymentInfo, callback) {
   setTimeout(() => {
-    callback(`Ticket Generated - ${paymentInfo}`);
+    callback(`Ticket Generated 🎟️ - ${paymentInfo}`);
   }, 500);
 }
 
@@ -53,14 +53,14 @@ function sendEmail(ticket, callback) {
 }
 // callback hell start
 
-selectMovie("LEO", function(movie) {
+selectMovie("LEO ❤️‍🔥", function(movie) {
   console.log(movie);
 
   getShowTimes(movie, function(showtimes) {
-    console.log("Showtimes:", showtimes);
+    console.log("Showtimes ⏱️:", showtimes);
 
     selectSeats(showtimes[0], function(seats) {
-      console.log("Seats selected:", seats);
+      console.log("Seats selected:💺", seats);
 
       lockSeats(seats, function(locked) {
         console.log(locked);
