@@ -8,7 +8,7 @@ function myfunction(){
     mypromise("i give promse")
 }
 function myfun(){
-    mypromise("i am not giveing promise")
+    mypromise("i am not giving promise")
 }
 myfunction();
 myfun();
