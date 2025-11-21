@@ -5,7 +5,7 @@ function mypromise(give){
     console.log(give)
 }
 function myfunction(){
-    mypromise("i give promse")
+    mypromise("i give promise")
 }
 function myfun(){
     mypromise("i am not giving promise")
