@@ -1,0 +1,100 @@
+/* Responsive layout for Restaurant Menu */
+:root{
+  --bg: #0f1724; /* deep navy */
+  --card: #0b1220;
+  --muted: #94a3b8;
+  --accent: #ff6b35; /* warm orange */
+  --accent-2: #ffd9bf;
+  --glass: rgba(255,255,255,0.06);
+  --radius: 12px;
+  --max-width: 1200px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,#061220 0%, #081426 60%);
+  color: #e6eef6;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.35;
+}
+
+.wrapper{
+  display:block;
+  max-width:var(--max-width);
+  margin:40px auto;
+  padding:18px;
+}
+
+/* Sidebar (mobile-first: collapses above breakpoint) */
+.sidebar{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.6);
+}
+
+.profile{display:flex;align-items:center;gap:14px}
+.chef-logo{width:64px;height:64px;border-radius:10px;object-fit:cover;border:2px solid rgba(255,255,255,0.06)}
+.profile h2{font-size:18px;margin:0}
+.profile p{margin:0;color:var(--muted);font-size:13px}
+
+.side-title,.side1-title{color:var(--muted);margin:20px 0 8px;font-size:13px}
+ul.side-links,ul.side1-links{list-style:none;padding:0;margin:0}
+ul.side-links li, ul.side1-links li{padding:8px 10px;border-radius:8px;color:#dbe8f7;background:transparent;margin-bottom:6px;font-weight:600}
+ul.side-links li:hover,ul.side1-links li:hover{background:rgba(255,255,255,0.02);cursor:pointer}
+
+/* main content */
+.content{background:transparent;padding:0}
+
+/* top nav */
+.top-nav{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px}
+.search-box{display:flex;align-items:center;background:var(--glass);padding:10px;border-radius:999px;gap:8px;flex:1;max-width:480px}
+.search-box input{border:0;background:transparent;outline:0;color:inherit;font-size:14px;width:100%}
+.search-box i{color:var(--muted);font-size:18px}
+
+.top-buttons{display:flex;align-items:center;gap:10px}
+.top-buttons button{border:0;padding:8px 12px;border-radius:8px;font-weight:600;cursor:pointer}
+.btn-signup{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.06)}
+.btn-login{background:var(--accent);color:#0b0b0b}
+.small-logo{width:38px;height:38px;border-radius:8px;object-fit:cover}
+
+.banner img{display:block;width:100%;height:160px;object-fit:cover;border-radius:12px;margin-bottom:14px;border:1px solid rgba(255,255,255,0.03)}
+
+.section-title{font-size:20px;margin:8px 0 12px;color:#ffffff}
+
+.food-container{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+.food-card{display:flex;align-items:center;gap:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.food-img{width:72px;height:72px;border-radius:10px;object-fit:cover;border:1px solid rgba(255,255,255,0.04)}
+.food-card h3{margin:0;font-size:16px}
+.food-card p{margin:0;color:var(--muted);font-size:13px}
+.add-btn{margin-left:auto;background:var(--accent);border:0;color:#0b0b0b;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer}
+
+/* Medium and up layout: two-column (sidebar + content) */
+@media(min-width:900px){
+  .wrapper{display:grid;grid-template-columns:260px 1fr;gap:20px}
+  .sidebar{margin:0;height:100%;position:sticky;top:28px;align-self:start}
+  .content{padding-left:6px}
+  .food-container{grid-template-columns:repeat(3,1fr)}
+  .banner img{height:220px}
+}
+
+/* larger screens, stretch card images */
+@media(min-width:1200px){
+  :root{--max-width:1400px}
+  .banner img{height:260px}
+}
+
+/* small screens adjustments */
+@media(max-width:420px){
+  .search-box{max-width:none}
+  .food-img{width:56px;height:56px}
+  .chef-logo{width:52px;height:52px}
+}
+
+/* subtle utility */
+.muted{color:var(--muted)}
+.center{display:flex;align-items:center;justify-content:center}

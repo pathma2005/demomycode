@@ -3,12 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
+
 <body>
-      <p id="demo"></p>
-    <script type="module" src="./mode1.js"></script>
-    <script type="module"  src="./mode2.js"></script>
-    <script type="module" src="./module3.js"></script>
+
+<div class="wrapper">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <div class="profile">
+            <img src="image/img.png" class="chef-logo">
+            <h2>Your Restaurant Menu</h2>
+            <p>Your Slogan</p>
+        </div>
+
+        <h3 class="side-title">Quick Links</h3>
+        <ul class="side-links">
+            <li>1. Home</li>
+            <li>2. Your Orders</li>
+            <li>3. Wallet</li>
+            <li>4. Profile</li>
+            <li>5. Logout</li>
+        </ul>
+
+        <h3 class="side1-title">More About Us</h3>
+        <ul class="side1-links">
+            <li>1. Our Blog</li>
+            <li>2. Upcoming Dishes</li>
+            <li>3. Our Story</li>
+            <li>4. Social Media Links</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- TOP NAV -->
+        <nav class="top-nav">
+            <div class="search-box">
+                <i class="ri-search-line"></i>
+                <input type="text" placeholder="Search food item">
+            </div>
+
+            <div class="top-buttons">
+                <button class="btn-signup">Signup</button>
+                <button class="btn-login">Login</button>
+                <img src="image/img.png" class="small-logo">
+            </div>
+        </nav>
+
+        <!-- BANNER -->
+        <div class="banner">
+            <img src="image/img2.png" alt="banner">
+        </div>
+
+        <h2 class="section-title">Menu</h2>
+
+        <!-- FOOD CARDS -->
+        <div class="food-container">
+
+            <div class="food-card">
+                <img src="image/img3.png" class="food-img">
+                <h3>Burger</h3>
+                <p>$5.99/-</p>
+                <button class="add-btn">+</button>
+            </div>
+
+            <div class="food-card">
+                <img src="image/img3.png" class="food-img">
+                <h3>Burger</h3>
+                <p>$5.99/-</p>
+                <button class="add-btn">+</button>
+            </div>
+
+            <div class="food-card">
+                <img src="image/img3.png" class="food-img">
+                <h3>Burger</h3>
+                <p>$5.99/-</p>
+                <button class="add-btn">+</button>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
