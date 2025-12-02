@@ -33,3 +33,5 @@ promise1
 .catch((e)=>{
     console.log("hi",e)
 })
+
+
